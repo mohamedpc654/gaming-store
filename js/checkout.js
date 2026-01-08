@@ -3,6 +3,11 @@
 // DOM elements
 const orderSummary = document.getElementById('order-summary');
 const whatsappBtn = document.getElementById('whatsapp-btn');
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const phone = document.getElementById('phone');
+const city = document.getElementById('city');
+const postalCode = document.getElementById('postal-code');
 
 // Function to get storage price
 function getStoragePrice(storage) {
@@ -42,7 +47,7 @@ function displayOrderSummary() {
         return;
     }
 
-    const storagePack = selectedStorage === 500 ? '500 GB' : selectedStorage === 1000 ? '1 TB (1000 GB)' : '2 TB (2000 GB)';
+    const storagePack = selectedStorage === 465 ? '500 GB' : selectedStorage === 930 ? '1 TB (1000 GB)' : '2 TB (2000 GB)';
     const price = getStoragePrice(selectedStorage);
     const gamesList = cart.map(game => `- ${game.name} (${game.size} GB)`).join('<br>');
 
@@ -67,11 +72,15 @@ function handleCheckout() {
         showToast('Cannot proceed with checkout. Please check your cart and storage selection.', 'error');
         return;
     }
+    if (!firstName.value.trim() || !lastName.value.trim() || !phone.value.trim() || !city.value.trim() || !postalCode.value.trim()) {
+        showToast('Please fill in all customer information fields.', 'error');
+        return;
+    }
 
-    const storagePack = selectedStorage === 500 ? '500 GB' : selectedStorage === 1000 ? '1 TB (1000 GB)' : '2 TB (2000 GB)';
+    const storagePack = selectedStorage === 465 ? '500 GB' : selectedStorage === 930 ? '1 TB (1000 GB)' : '2 TB (2000 GB)';
     const price = getStoragePrice(selectedStorage);
     const gamesList = cart.map(game => `- ${game.name} (${game.size} GB)`).join('\n');
-    const message = `Hello, I want to order:\nStorage Pack: ${storagePack}\nPrice: ${price} DT\nGames:\n${gamesList}\nTotal size: ${totalSize} GB`;
+    const message = `Hello, I want to order:\n\nCustomer Information:\nFirst Name: ${firstName.value}\nLast Name: ${lastName.value}\nPhone: ${phone.value}\nCity: ${city.value}\nPostal Code: ${postalCode.value}\n\nStorage Pack: ${storagePack}\nPrice: ${price} DT\nGames:\n${gamesList}\nTotal size: ${totalSize} GB`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
