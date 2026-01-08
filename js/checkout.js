@@ -6,9 +6,9 @@ const whatsappBtn = document.getElementById('whatsapp-btn');
 
 // Function to get storage price
 function getStoragePrice(storage) {
-    if (storage === 500) return 99;
-    if (storage === 1000) return 159;
-    if (storage === 2000) return 199;
+    if (storage === 465) return 99;
+    if (storage === 930) return 159;
+    if (storage === 1860) return 199;
     return 0;
 }
 
