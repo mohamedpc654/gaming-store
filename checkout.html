@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Store - Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="icons/tunisie1.png" alt="Tunisian Flag" class="tunisian-flag">
+                    <h1 class="logo">Gaming Store</h1>
+                    <img src="icons/tunisie1.png" alt="Tunisian Flag" class="tunisian-flag">
+                </div>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="checkout-section">
+            <h2>Order Summary</h2>
+            <div id="order-summary"></div>
+            <button id="whatsapp-btn" class="cta-button">Order via WhatsApp</button>
+            <a href="storage.html" class="back-button">Back to Storage</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Gaming Store. All rights reserved. - Mohamed El Fehri</p>
+    </footer>
+    <div id="toast-container"></div>
+    <script src="js/data.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

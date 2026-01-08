@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Store - Storage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="icons/tunisie1.png" alt="Tunisian Flag" class="tunisian-flag">
+                    <h1 class="logo">Gaming Store</h1>
+                    <img src="icons/tunisie1.png" alt="Tunisian Flag" class="tunisian-flag">
+                </div>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="storage-section">
+            <h2>Select Storage Pack</h2>
+            <div id="storage-options" class="storage-options">
+                <label class="storage-option"><input type="radio" name="storage" value="460" checked> 500 GB</label>
+                <label class="storage-option"><input type="radio" name="storage" value="930"> 1 TB (1000 GB)</label>
+                <label class="storage-option"><input type="radio" name="storage" value="1860"> 2 TB (2000 GB)</label>
+            </div>
+            <div id="progress-container" class="progress-container">
+                <div id="progress-bar" class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <div id="progress-text" class="progress-text"></div>
+            </div>
+            <div class="storage-actions">
+                <a href="cart.html" class="back-button">Back to Cart</a>
+                <a href="checkout.html" id="checkout-link" class="cta-button">Proceed to Checkout</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Gaming Store. All rights reserved. - Mohamed El Fehri</p>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+</body>
+</html>
